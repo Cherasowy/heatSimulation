@@ -1,0 +1,192 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+h1{
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+
+}
+h2{
+  margin-bottom: 20px;
+}
+strong{
+  font-size: 1.2em;
+}
+button{
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50px 20px;
+  padding: 10px 20px 10px 20px;
+  font-weight: bold;
+  font-size: 1.8em;
+  transition: all 0.5s;
+}
+button:hover{
+  background-color: black;
+  color:white;
+}
+input[type=number]{
+  font-weight: bold;
+  border: 1px solid black;
+  width: 10%;
+  text-align: center;
+  margin-left: 20px;
+}
+/* Range input from https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */ 
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 50%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 50%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+.top{
+	height: 60%;
+	width: 100%;
+	text-align: center;
+}
+.chartcontainer{
+	margin: auto;
+}
+.materials{
+	grid-column: 1;
+  height: auto;
+  margin:0px;
+}
+.coolers{
+  grid-column: 2;
+}
+.simulationbtn{
+	border-radius: 10px 10px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+.container{
+	width: 90%;
+	margin: auto;
+}
+.selected{
+	background-color: black;
+	color:white;
+}
+.navbar{
+  position: fixed;
+    top: 20px;
+    right: 0;
+    width: 300px;
+    z-index: 5; 
+}
+.flexcont{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+#runSimulation{
+  border-radius: 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#report{
+  margin-bottom: 20px;
+  width: 283px;
+  opacity: 0.3;
+}
+#report:hover{
+  opacity: 1;
+}
+#simulation{
+  margin-bottom: 20px;
+  width: 283px;
+  opacity: 0.3;
+}
+#simulation:hover{
+  opacity: 1;
+}
+#contain{
+  margin: 20px;
+}

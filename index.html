@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Projekt Zaliczeniowy z Automatyki</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script defer src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body id="yourReport">
+    <div class="top">
+        <h1>Chłodzenie materiałów w zależności od ilości i rodzaju chłodziwa</h1>
+        <div class = "navbar">
+            <button id="report">Sprawozdanie <i class="fa fa-file-text" aria-hidden="true"></i>
+            </button>
+            <button id="simulation">Własna symulacja <i class="fa fa-line-chart" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div class="flexcont">
+        <div class="materials" id="contain">
+            <h1>Warunki symulacji</h1>
+            <h2 id="yourSimulation"><strong>Wybierz materiał:</strong></h2>
+            <button class="simulationbtn material" id="mat1">Stal</button>
+            <button class="simulationbtn material" id="mat2">Złoto</button>
+            <button class="simulationbtn material" id="mat3">Glin</button>
+            <button class="simulationbtn material" id="mat4">Ołów</button>
+            <h2>Waga [kg]</h2>
+            <input type="range" name="materialAmount" id="materialAmount" min="1" max="10" value="5.9" step="0.1">
+            <input id="numMaterialAmount" type="number">
+            <h2>Temperatura [°C]</h2>
+            <input type="range" name="materialTemp" id="materialTemp" min="500" max="1000" value="770" step="10">
+            <input id="numMaterialTemp" type="number">
+            <h2>Powierzchnia [m²]</h2>
+            <input type="range" name="materialSurface" id="materialSurface" min="0.01" max="1" value="0.17" step="0.01">
+            <input id="numMaterialSurface" type="number">
+            <h2><strong>Wybierz chłodziwo:</strong></h2>
+            <button class="simulationbtn cooler">Woda</button>
+            <button class="simulationbtn cooler">Olej</button>
+            <h2>Objetosc [l]</h2>
+            <input type="range" name="coolerAmount" id="coolerAmount" min="50" max="1000" value="80" step="10">
+            <input id="numCoolerAmount" type="number">
+            <h2>Temperatura [°C]</h2>
+            <input type="range" name="coolerTemp" id="coolerTemp" min="0" max="100" value="20" step="1">
+            <input id="numCoolerTemp" type="number">
+            <h2>Dopuszczalne odchylenie temperatury chlodziwa [°C]</h2>
+            <input type="range" name="coolerMaxTemp" id="coolerMaxTemp" min="0" max="10" value="0.5" step="0.1">
+            <input id="numCoolerMaxTemp" type="number">
+            <h2>Przepływ [l/s]</h2>
+            <input type="range" name="coolerFlow" id="coolerFlow" min="0" max="100" value="5" step="1">
+            <input id="numCoolerFlow" type="number">
+            <h2>Temperatura pompowanej cieczy [°C]</h2>
+            <input type="range" name="coolerFlowTemp" id="coolerFlowTemp" min="0" max="100" value="10" step="1">
+            <input id="numCoolerFlowTemp" type="number">
+            <div>
+                <button id="runSimulation">Uruchom Symulację</button>
+            </div>
+        </div>
+        <div class="coolers">
+            <div class="chartcontainer">
+                <div id="chart_div"></div>
+            </div>
+            <div class="chartcontainer">
+                <div id="chart_div2"></div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
